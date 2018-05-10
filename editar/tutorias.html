@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>My Files</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body>
+
+<div class="container">
+  <div class="col-md-5">
+      <div class="form-area">
+          <form role="form">
+          <br style="clear:both">
+            <h3 style="margin-bottom: 25px; text-align: center;"> TUTORIAS</h3>
+            <div class="form-group">
+              <label for="nombre_alumno">Nombre del Alumno:</label>
+  					  <input data-type="nombre" type="text" class="form-control" id="nombre_alumno" name="nombre_alumno" placeholder="Nombre del Alumno" >
+  					</div>
+            <div class="form-group">
+              <label for="fecha_inicio">Fecha de Inicio:</label>
+              <input data-type="fecha" type="date" class="form-control" id="fecha_inicio" name="fecha_inicio" placeholder="Fecha de Inicio" >
+            </div>
+            <div class="form-group">
+              <label for="fecha_fin">Fecha de Fin:</label>
+              <input data-type="fecha" type="date" class="form-control" id="fecha_fin" name="fecha_fin" placeholder="Fecha de Fin" >
+            </div>
+  					<div class="form-group">
+              <label for="horas_semana">Horas por Semana:</label>
+  						<input data-type="numero" type="number" class="form-control" id="horas_semana" name="horas_semana" placeholder="Horas por Semana" >
+  					</div>
+
+            <button type="button" id="submit" name="submit" class="btn btn-primary pull-right">EDITAR</button>
+          </form>
+      </div>
+  </div>
+</div>
+
+<!-- jQuery -->
+<script src="../js/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="../js/bootstrap.min.js"></script>
+
+<!-- VALIDATION -->
+<script src="../js/validation.js"></script>
+
+<!-- PAGINA -->
+<script src="../js/view/agregar/tutorias.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>My Files</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body>
+
+<div class="container">
+  <div class="col-md-5">
+      <div class="form-area">
+          <form novalidate>
+          <br style="clear:both">
+            <h3 style="margin-bottom: 25px; text-align: center;"> FORMACIÓN ACADÉMICA</h3>
+            <div class="form-group">
+              <label for="grado">Grado de estudios:</label>
+              <select class="form-control" id="grado">
+                <option value="0" selected>Seleccione un grado....</option>
+                <option value="Licenciatura">Licenciatura</option>
+                <option value="Especialidad">Especialidad</option>
+                <option value="Maestría">Maestría</option>
+                <option value="Doctorado">Doctorado</option>
+              </select>
+            </div>
+      			<div class="form-group">
+              <label for="nombre">Nombre:</label>
+  					  <input data-type="nombre" type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre" >
+  					</div>
+  					<div class="form-group">
+              <label for="institucion_procedencia">Institucion de Procedencia:</label>
+  						<input data-type="nombre" type="text" class="form-control" id="institucion_procedencia" name="institucion_procedencia" placeholder="Institucion de Procedencia" >
+  					</div>
+  					<div class="form-group">
+              <label for="fecha_inicio">Fecha de Inicio:</label>
+  						<input data-type="fecha" type="date" class="form-control" id="fecha_inicio" name="fecha_inicio" placeholder="Fecha de Inicio" >
+  					</div>
+  					<div class="form-group">
+              <label for="fecha_termino">Fecha de termino:</label>
+  						<input data-type="fecha" type="date" class="form-control" id="fecha_termino" name="fecha_termino" placeholder="Fecha de termino" >
+  					</div>
+  					<div class="form-group">
+              <label for="fecha_obtencion">Fecha de obtención:</label>
+  						<input data-type="fecha" type="date" class="form-control" id="fecha_obtencion" name="fecha_obtencion" placeholder="Fecha de obtención" >
+  					</div>
+            <div class="form-group">
+              <label for="cedula">Cedula profesional:</label>
+  					  <input data-type="numero" type="text" class="form-control" id="cedula" name="cedula" placeholder="Cedula profesional" >
+  					</div>
+
+            <button type="button" id="submit" name="submit" class="btn btn-primary pull-right">EDITAR</button>
+          </form>
+      </div>
+  </div>
+</div>
+
+<!-- jQuery -->
+<script src="../js/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="../js/bootstrap.min.js"></script>
+
+<!-- VALIDATION -->
+<script src="../js/validation.js"></script>
+
+<!-- PAGINA -->
+<script src="../js/view/agregar/formacion.js"></script>
+
+</body>
+</html>
