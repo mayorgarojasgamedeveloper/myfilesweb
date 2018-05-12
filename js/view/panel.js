@@ -17,7 +17,6 @@ $('document').ready(function() {
       $('#foto').attr('src', `img/usuarios/${data.foto}`);
     }
 
-    $('#usuario').html(data.usuario.toUpperCase());
     $('#nombre').html(data.nombre);
     $('#apellido').html(data.apellido);
     $('#domicilio').html(data.domicilio);

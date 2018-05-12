@@ -11,7 +11,6 @@ $('documnet').ready(function() {
   });
 
   function rednerInfo(data) {
-    $('#usuario').html(data.usuario.toUpperCase());
     $('#nombre').val(data.nombre);
     $('#apellido').val(data.apellido);
     $('#domicilio').val(data.domicilio);

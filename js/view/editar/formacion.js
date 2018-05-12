@@ -1,9 +1,26 @@
-if(Cookies.get('sesion') == null)
-  window.location.replace("../index.html");
+function findGetParameter(parameterName) {
+  var result = null,
+      tmp = [];
+  var items = location.search.substr(1).split("&");
+  for (var index = 0; index < items.length; index++) {
+      tmp = items[index].split("=");
+      if (tmp[0] === parameterName) result = decodeURIComponent(tmp[1]);
+  }
+  return result;
+}
 
-var sesion = Cookies.getJSON('sesion');
+$('document').ready(function() {
 
-$('documnet').ready(function() {
+  $.ajax({url: `http://localhost:3000/formacion/${findGetParameter('id')}`, method: `get`})
+  .done(function(data) {
+    $('#grado').val(data[0].grado);
+    $('#nombre').val(data[0].nombre);
+    $('#institucion').val(data[0].institucion);
+    $('#fecha_inicio').val(data[0].fecha_inicio.substring(0,10));
+    $('#fecha_fin').val(data[0].fecha_fin.substring(0,10));
+    $('#fecha_obtencion').val(data[0].fecha_obtencion.substring(0,10));
+    $('#cedula').val(data[0].cedula);
+  });
 
   $('#submit').on('click', function() {
     $('.error').remove();
@@ -20,7 +37,6 @@ $('documnet').ready(function() {
     if(status > 0) return 0;
 
     var objeto = {
-      usuario: sesion["usuario"],
       grado: $('#grado').val(),
       nombre: $('#nombre').val(),
       institucion: $('#institucion').val(),
@@ -33,7 +49,7 @@ $('documnet').ready(function() {
     console.log(objeto);
 
     $('#submit').attr('disabled', true);
-    $.ajax({url: `http://localhost:3000/formacion`, data: objeto, method: `post`})
+    $.ajax({url: `http://localhost:3000/formacion/${findGetParameter('id')}`, data: objeto, method: `put`})
     .done(function(data) {
       alertify.alert(`MyFiles`, `Se guardo exitosamente!`, function(){
         alertify.message('OK');
@@ -41,6 +57,5 @@ $('documnet').ready(function() {
       });
     });
 
-  }); //- Fin de clic
-
+  });// Fin del boton
 });
