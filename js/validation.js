@@ -8,6 +8,7 @@ var regex = {
   "curriculum": /^[a-zA-Z0-9,. !-/]{3,200}$/,
   "foto": /\.(jpg|png)\b/,
   "numero": /^[0-9]{1,20}$/,
+  "direccion": /^[a-zA-Z0-9,. #-]{1,40}$/,
   "fecha": /^\d{4}[\/\-](0?[1-9]|1[012])[\/\-](0?[1-9]|[12][0-9]|3[01])$/
 };
 
@@ -21,6 +22,7 @@ var regexErrors = {
   "curriculum": "El campo debe tener entre 3 y 400 letras.",
   "foto": "No es el formato correcto.",
   "numero": "Formato de numero incorrecto.",
+  "direccion": "La direccion tiene un formato no valido",
   "fecha": "Fecha incorrecta."
 };
 

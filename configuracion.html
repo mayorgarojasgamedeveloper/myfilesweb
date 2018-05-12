@@ -11,21 +11,13 @@
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- MetisMenu CSS -->
     <link href="css/metisMenu.min.css" rel="stylesheet">
-
-    <!-- Timeline CSS -->
     <link href="css/timeline.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
     <link href="css/startmin.css" rel="stylesheet">
-
-    <!-- Morris Charts CSS -->
     <link href="css/morris.css" rel="stylesheet">
-
-    <!-- Custom Fonts -->
     <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/themes/default.min.css">
+    <link rel="stylesheet" href="css/alertify.min.css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -55,7 +47,7 @@
         <ul class="nav navbar-right navbar-top-links">
             <li class="dropdown">
                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                    <i class="fa fa-user fa-fw"></i> <span id="usuario">FERNANDO</span> <b class="caret"></b>
+                    <i class="fa fa-user fa-fw"></i> <span id="usuario">cargando...</span> <b class="caret"></b>
                 </a>
                 <ul class="dropdown-menu dropdown-user">
                   <li><a href="imprimir.html"><i class="fa fa-print fa-fw"></i> Imprimir curriculum</a>
@@ -158,27 +150,27 @@
                 <h3 style="margin-bottom: 25px; text-align: center;"> CONFIGURACIÓN</h3>
                 <div class="form-group">
                   <label for="nombre">Nombre:</label>
-                  <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre" required>
+                  <input data-type="nombre" type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre" required>
                 </div>
                 <div class="form-group">
                   <label for="apellido">Apellido:</label>
-                  <input type="text" class="form-control" id="apellido" name="apellido" placeholder="Apellido" required>
+                  <input data-type="nombre" type="text" class="form-control" id="apellido" name="apellido" placeholder="Apellido" required>
                 </div>
                 <div class="form-group">
                   <label for="domicilio">Domicilio:</label>
-                  <input type="text" class="form-control" id="domicilio" name="domicilio" placeholder="Domicilio" required>
+                  <input data-type="direccion" type="text" class="form-control" id="domicilio" name="domicilio" placeholder="Domicilio" required>
                 </div>
                 <div class="form-group">
                   <label for="ciudad">Ciudad:</label>
-                  <input type="text" class="form-control" id="ciudad" name="ciudad" placeholder="Ciudad" required>
+                  <input data-type="nombre" type="text" class="form-control" id="ciudad" name="ciudad" placeholder="Ciudad" required>
                 </div>
                 <div class="form-group">
                   <label for="telefono">Telefono:</label>
-                  <input type="number" class="form-control" id="telefono" name="telefono" placeholder="Telefono" required>
+                  <input data-type="numero" type="number" class="form-control" id="telefono" name="telefono" placeholder="Telefono" required>
                 </div>
                 <div class="form-group">
                   <label for="correo">Correo:</label>
-                  <input type="email" class="form-control" id="correo" name="correo" placeholder="Correo" required>
+                  <input data-type="correo" type="email" class="form-control" id="correo" name="correo" placeholder="Correo" required>
                 </div>
                 <hr class="my-4">
 
@@ -186,21 +178,21 @@
                     <div class="col-lg-6">
                         <div class="form-group">
                           <label for="nombre_dependiente_1">Nombre dependiente #1:</label>
-                          <input type="text" class="form-control" id="nombre_dependiente_1" name="nombre_dependiente_1" placeholder="Nombre dependiente #1" required>
+                          <input data-type="nombre" type="text" class="form-control" id="nombre_dependiente_1" name="nombre_dependiente_1" placeholder="Nombre dependiente #1" required>
                         </div>
                         <div class="form-group">
                           <label for="edad_dependiente_1">Edad dependiente #1:</label>
-                          <input type="number" class="form-control" id="edad_dependiente_1" name="edad_dependiente_1" placeholder="Edad dependiente #1" required>
+                          <input data-type="numero" type="number" class="form-control" id="edad_dependiente_1" name="edad_dependiente_1" placeholder="Edad dependiente #1" required>
                         </div>
                     </div>
                     <div class="col-lg-6">
                         <div class="form-group">
                           <label for="nombre_dependiente_2">Nombre dependiente #2:</label>
-                          <input type="text" class="form-control" id="nombre_dependiente_2" name="nombre_dependiente_2" placeholder="Nombre dependiente #2" required>
+                          <input data-type="nombre" type="text" class="form-control" id="nombre_dependiente_2" name="nombre_dependiente_2" placeholder="Nombre dependiente #2" required>
                         </div>
                         <div class="form-group">
                           <label for="edad_dependiente_2">Edad dependiente #2:</label>
-                          <input type="number" class="form-control" id="edad_dependiente_2" name="edad_dependiente_2" placeholder="Edad dependiente #2" required>
+                          <input data-type="numero" type="number" class="form-control" id="edad_dependiente_2" name="edad_dependiente_2" placeholder="Edad dependiente #2" required>
                         </div>
                     </div>
                 </div>
@@ -211,14 +203,25 @@
               <hr class="my-4">
               <br>
 
+
+              <div id="formFoto"></div>
+
+              <br>
+              <hr class="my-4">
+              <br>
+
               <form>
                 <br style="clear:both">
-                <h3 style="margin-bottom: 25px; text-align: center;"> FOTO</h3>
-                <div class="custom-file">
-                  <label class="custom-file-label" for="foto">Seleccione Foto...</label>
-                  <input type="file" class="custom-file-input" name="foto" id="foto" required>
+                <h3 style="margin-bottom: 25px; text-align: center;"> CONTRASEÑA</h3>
+                <div class="form-group">
+                  <label for="contrasena">Contraseña:</label>
+                  <input data-type="contrasena" type="password" class="form-control" id="contrasena" name="contrasena" placeholder="Contraseña" required>
                 </div>
-                <button type="button" id="submit" name="submit" class="btn btn-primary pull-right">CAMBIAR FOTO</button>
+                <div class="form-group">
+                  <label for="contrasena_rep">Repote contraseña:</label>
+                  <input data-type="contrasena" type="password" class="form-control" id="contrasena_rep" name="contrasena_rep" placeholder="Repite Contraseña" required>
+                </div>
+                <button type="button" id="submit_contrasena" name="submit" class="btn btn-primary pull-right">CAMBIAR CONTRASEÑA</button>
               </form>
               <br><br>
             </div>
@@ -230,15 +233,15 @@
 
 <!-- jQuery -->
 <script src="js/jquery.min.js"></script>
-
-<!-- Bootstrap Core JavaScript -->
 <script src="js/bootstrap.min.js"></script>
-
-<!-- Metis Menu Plugin JavaScript -->
 <script src="js/metisMenu.min.js"></script>
-
-<!-- Custom Theme JavaScript -->
 <script src="js/startmin.js"></script>
+<script src="js/alertify.min.js" type="text/javascript"></script>
+<script src="js/js.cookie.js" type="text/javascript"></script>
+<script src="js/md5.min.js" type="text/javascript"></script>
+
+<script src="js/validation.js"></script>
+<script src="js/view/configuracion.js"></script>
 
 </body>
 </html>
