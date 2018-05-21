@@ -16,7 +16,7 @@ $('documnet').ready(function() {
           html += `<td>${value.nombre_alumno}</td>`;
           html += `<td>${value.fecha_inicio.substring(0,10)}</td>`;
           html += `<td>${value.fecha_fin.substring(0,10)}</td>`;
-          html += `<td>${value.horas_semana}hr por semana</td>`;
+          html += `<td>${value.horas_semana} hrs. por semana</td>`;
           html += `  <td>`;
           html += `    <button type="button" id="ver" name="button" data-type="${value.id}"><i class="fa fa-eye fa-fw"></i></button>`;
           html += `    <button type="button" id="editar" name="button" data-type="${value.id}"><i class="fa fa-edit fa-fw"></i></button>`;
@@ -46,7 +46,7 @@ $('documnet').ready(function() {
   $('#tabla').on('click', '#eliminar', function() {
     var button = $(this);
     var id = button.data('type');
-    alertify.confirm("MyFiles","Se eliminara el archivo permanentemente.",
+    alertify.confirm("MyFiles","Se eliminará el archivo permanentemente.",
     function(){
       $.ajax({url: `http://localhost:3000/tutorias`,data: {id: id} , method: `delete`})
       .done(function(data) {

@@ -47,7 +47,7 @@ $('documnet').ready(function() {
   $('#tabla').on('click', '#eliminar', function() {
     var button = $(this);
     var id = button.data('type');
-    alertify.confirm("MyFiles","Se eliminara el archivo permanentemente.",
+    alertify.confirm("MyFiles","Se eliminará el archivo permanentemente.",
     function(){
       $.ajax({url: `http://localhost:3000/formacion`,data: {id: id} , method: `delete`})
       .done(function(data) {
